@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.layout {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "encabezado encabezado" "principal principal" "pie pie"; }
+
+.encabezado {
+  grid-area: encabezado;
+  background-color: wheat;
+  background-blend-mode: color-burn;
+  height: 650px;
+  background-image: url(../assets/BackgroundHeader.png);
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat; }
+  .encabezado h2 {
+    font-size: 2rem;
+    text-align: right;
+    position: relative;
+    top: 50%;
+    right: 100px;
+    font-family: "Quicksand", sans-serif; }
+  .encabezado__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    background-color: antiquewhite;
+    opacity: 0.7; }
+    .encabezado__nav--titulo {
+      font-family: "Pacifico", cursive;
+      font-size: 3 rem;
+      align-self: center; }
+    .encabezado__nav nav ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none; }
+      .encabezado__nav nav ul li {
+        font-family: "Quicksand", sans-serif; }
+      .encabezado__nav nav ul li a {
+        text-decoration: none;
+        color: black; }
+
+.principal {
+  grid-area: principal; }
+  .principal__bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 650px;
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+    color: #242526;
+    margin: 5% 0; }
+    .principal__bio h2 {
+      padding: 0 20%; }
+    .principal__bio p {
+      padding: 0 20%; }
+    .principal__bioPh {
+      height: 300px;
+      background-image: url(../assets/MyPhoto.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; }
+  .principal__conocimientos {
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+    margin: 5% 0;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .principal__conocimientos h2 {
+      text-align: right;
+      padding: 0 20%; }
+    .principal__conocimientos p {
+      padding: 0 20%; }
+    .principal__conocimientos h3 {
+      text-align: center;
+      margin: 5% 0;
+      padding: 0 20%; }
+    .principal__conocimientos--tools {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto auto;
+      height: 500px;
+      background-color: lightgrey;
+      margin: 0 15%; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsHTML {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 1/span 2; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsHTML img {
+        width: 100px; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsGIT {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2/span 3;
+        grid-row: 1/2; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsGIT img {
+        width: 100px; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsSASS {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2/3;
+        grid-row: 2/3; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsSASS img {
+        width: 100px; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsCSS {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 3/4;
+        grid-row: 2/4; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsCSS img {
+        width: 100px; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsJS {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 3/4; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsJS img {
+        width: 100px; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsGITHub {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2/3;
+        grid-row: 3/4; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsGITHub img {
+        width: 100px; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsBootstrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 4/5;
+        grid-row: 2/4; }
+      .principal__conocimientos--tools .principal__conocimientos--toolsBootstrap img {
+        width: 100px; }
+  .principal__experiencia {
+    background-color: black;
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 650px;
+    padding: 0 20%; }
+    .principal__experienciaProyecto {
+      height: 170px;
+      width: 150px;
+      background-color: black;
+      transition: all 1.5s; }
+      .principal__experienciaProyecto img {
+        width: 100%; }
+      .principal__experienciaProyecto p {
+        position: absolute;
+        text-align: center;
+        font-size: 1rem;
+        display: none; }
+    .principal__experienciaProyecto:hover {
+      opacity: 0.5; }
+    .principal__experienciaProyecto:hover p {
+      display: block; }
+  .principal__contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+    margin: 5% 0; }
+    .principal__contacto h3 {
+      padding: 0 20%; }
+    .principal__contactoTxt {
+      padding: 0 20%; }
+    .principal__contactoRedes {
+      display: flex;
+      justify-content: space-around;
+      width: 100%; }
+      .principal__contactoRedes--email {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+      .principal__contactoRedes--ig {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+      .principal__contactoRedes--tw {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+      .principal__contactoRedes--fb {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+
+footer {
+  grid-area: pie;
+  height: 200px;
+  font-family: "Quicksand", sans-serif;
+  background: black;
+  opacity: 0.8; }
+  footer p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    color: whitesmoke; }
