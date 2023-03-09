@@ -189,18 +189,19 @@ html{
         &Proyecto:hover p{ 
             display: block;  
         }
-        &Proyecto--puntoverde {
+        &Proyecto--puntoVerde {
             height: 170px;
             width: 150px;
             background-color: black;
             transition: all 1.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             & img{
                 width: 100%;
                 border-radius: 50%;
             }
             & p{
-                position:absolute;
-                text-align: center;
                 font-size: 1rem;
                 display: none;
             }
