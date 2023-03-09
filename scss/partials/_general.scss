@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .encabezado{
     grid-area: encabezado;
     background-color: wheat;
@@ -10,25 +13,28 @@
     background-repeat: no-repeat;
     & h2{
         font-size: 2rem;
-        text-align: right;
-        position: relative;
+        position: absolute;
         top: 50%;
-        right: 100px;
+        right: 25px;
         font-family: $main-font;
     }
     &__nav{
         display: flex;
         flex-direction: column;
         justify-content: space-around;       
-        height: 100px;
+        height: 200px;
         position: sticky;
         top: 0;
         background-color: antiquewhite;
         opacity: 0.7;
-        &--titulo{
-        font-family: $title-logo;
-        font-size: 3 rem;
+        &--logo{
+        height: 125px;
         align-self: center;
+        & img{
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #afa4a48a;
+        }
         }
         & nav ul{
             display: flex;
@@ -181,6 +187,28 @@
             opacity: 0.5;
         }
         &Proyecto:hover p{ 
+            display: block;  
+        }
+        &Proyecto--puntoverde {
+            height: 170px;
+            width: 150px;
+            background-color: black;
+            transition: all 1.5s;
+            & img{
+                width: 100%;
+                border-radius: 50%;
+            }
+            & p{
+                position:absolute;
+                text-align: center;
+                font-size: 1rem;
+                display: none;
+            }
+        }
+        &Proyecto--puntoVerde:hover{
+            opacity: 0.5;
+        }
+        &Proyecto--puntoVerde:hover p{ 
             display: block;  
         }
     }

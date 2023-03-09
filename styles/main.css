@@ -10,6 +10,9 @@
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "encabezado encabezado" "principal principal" "pie pie"; }
 
+html {
+  scroll-behavior: smooth; }
+
 .encabezado {
   grid-area: encabezado;
   background-color: wheat;
@@ -22,24 +25,26 @@
   background-repeat: no-repeat; }
   .encabezado h2 {
     font-size: 2rem;
-    text-align: right;
-    position: relative;
+    position: absolute;
     top: 50%;
-    right: 100px;
+    right: 25px;
     font-family: "Quicksand", sans-serif; }
   .encabezado__nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100px;
+    height: 200px;
     position: sticky;
     top: 0;
     background-color: antiquewhite;
     opacity: 0.7; }
-    .encabezado__nav--titulo {
-      font-family: "Pacifico", cursive;
-      font-size: 3 rem;
+    .encabezado__nav--logo {
+      height: 125px;
       align-self: center; }
+      .encabezado__nav--logo img {
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #afa4a48a; }
     .encabezado__nav nav ul {
       display: flex;
       justify-content: space-evenly;
@@ -178,6 +183,23 @@
     .principal__experienciaProyecto:hover {
       opacity: 0.5; }
     .principal__experienciaProyecto:hover p {
+      display: block; }
+    .principal__experienciaProyecto--puntoverde {
+      height: 170px;
+      width: 150px;
+      background-color: black;
+      transition: all 1.5s; }
+      .principal__experienciaProyecto--puntoverde img {
+        width: 100%;
+        border-radius: 50%; }
+      .principal__experienciaProyecto--puntoverde p {
+        position: absolute;
+        text-align: center;
+        font-size: 1rem;
+        display: none; }
+    .principal__experienciaProyecto--puntoVerde:hover {
+      opacity: 0.5; }
+    .principal__experienciaProyecto--puntoVerde:hover p {
       display: block; }
   .principal__contacto {
     display: flex;
